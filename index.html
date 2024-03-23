@@ -5,31 +5,30 @@
     <title>Задача «Подписка на бложик»</title> 
     <link rel="stylesheet" href="index.css">      
 </head>
-<body>
-    
+<body>    
     <div id="input-form" class="input-form">     
         <header class="header-text">Хочу подписаться!</header>
-        <nav class="navigation-text">После вашего согласия на подписку вам будут приходить уведомления на почту и телефон</nav>
+        <label class="up-text">После вашего согласия на подписку вам будут приходить уведомления на почту и телефон</label>
         <form id="that-form" class="that-form">
-            <section id="cell-names" class="cell-names">
-                <label for="your-name">Ваше имя</label>
+            <fieldset id="cell-names" class="cell-names">
+                <label for="name">Ваше имя</label>
+                <input type="text" name="name" id="name" class="cell-input" placeholder="Имя" pattern="^[А-Яа-яЁё]" maxlength="35" required />
                 <label for="email">Email</label>
-                <label for="phone-number">Телефон</label>
-            </section>
-            <aside class="cell-input">
-                <input type="text" name="name" id="name" placeholder="Имя" pattern="^[А-Яа-яЁё]" maxlength="35" required />
-                <input type="email" name="email" id="email" placeholder="email@yandex.com" required />
-                <input type="tel" name="phone" id="phone" placeholder="89990007766" pattern="[0-9]{11}" maxlength="11" required />
-            </aside>
-            <nav id="label-notifications" class="label-notifications">Хочу получать уведомления</nav>        
-            <section id="check-send" class="check-send">                
-                <input type="checkbox" id="send-email" class="send-email" value="на почту" checked required />
-                <input type="checkbox" id="send-phone" class="send-phone" value="на телефон" checked required />
-            </section>
-            <aside id="check-label" class="check-label">
-                <label for="send-email" class="checkbtn" >на почту</label>
-                <label for="send-phone" class="checkbtn">на телефон</label>
-             </aside>           
+                <input type="email" name="email" id="email" class="cell-input" placeholder="email@yandex.com" required />
+                <label for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" class="cell-input" placeholder="89990007766" pattern="[0-9]{11}" maxlength="11" required />
+            </fieldset>
+            <fieldset id="check-label" class="check-label">
+                <legend id="label-notifications" class="label-notifications">Хочу получать уведомления</legend> 
+                <label for="send-email" class="checkbtn" >
+                    <input type="checkbox" id="send-email" class="send-email" value="на почту" checked required />
+                    на почту
+                </label>
+                <label for="send-phone" class="checkbtn">
+                    <input type="checkbox" id="send-phone" class="send-phone" value="на телефон" checked required />
+                    на телефон
+                </label>
+            </fieldset>           
             <button type="submit" id="btn-subscribe" class="btn-subscribe">Подписаться</button>
         </form>
     </div>
@@ -52,10 +51,8 @@
             </td>
             <td id="fourth-cell" class="fourth-cell">
                 <p id="footer-year" class="footer-year">2024,<a class="click-link" href="https://ya.ru/">Яндекс</a></p>
-                
         </td>
           </tr>
     </table>
-    
 </body>
 </html>

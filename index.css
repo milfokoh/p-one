@@ -37,34 +37,30 @@ body {
     margin: 0 0 15px 0px ;
 }
 
-.navigation-text {
+.up-text {
     margin: 0 0 15px 7px ;
+    float: inline-start;
 }
 
 .cell-names {
-    width: 20%;
-    float: left;
     display: flex;
-    flex-direction: column;
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 0;
 }
 
 .cell-names label {
-    margin: 0 0 10px 0 ;
+    flex-basis: 15%;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .cell-input {
-    width: 75%;
-    padding: 0 5px;
-    border-radius: 1px;    
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 10px 0 ;
-}
-
-.cell-input input {
-    margin: 0 0 9px 0 ;
+    flex-basis: 75%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
     border: 1px solid rgba(81, 79, 79, 0.1);
+    border-radius: 3px;
 }
 
 .label-notifications {
@@ -77,18 +73,18 @@ body {
     float: left;
     display: flex;
     flex-direction: column;
-    padding: 7px 0 0 3px;
-    
+    padding: 7px 0 0 3px; 
 }
 
 .check-send input {
-    margin: 0 0 9px 0 ;
+    margin-bottom: 9px;
 }
 
 .check-label {
     width: 90%;
     display: flex;
     flex-direction: column;
+    border: 0;
 }
 
 .btn-subscribe { 
@@ -99,7 +95,7 @@ body {
     border-radius: 2px;
     cursor: pointer;    
     padding: 8px 20px;
-    margin: 5px 5px;
+    margin: 5px 0;
 }
 
 .output-form {
@@ -112,8 +108,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top: #000000;
     position: relative;
-    border-collapse: collapse;
-   
+    border-collapse: collapse;   
 }
 
 .first-cell {
@@ -129,16 +124,13 @@ body {
 
 .third-cell {
     border-top: 1px solid #bcb9b9;
-
 }
 
 .fourth-cell {
-   border-top: 1px solid #bcb9b9; 
-   
+   border-top: 1px solid #bcb9b9;    
 }
 
-.footer-year {
-    
+.footer-year {    
     font-size: 12px;
 }
 
@@ -158,6 +150,5 @@ body {
 .ya-img {
     position:absolute;
     top: 5%;
-    right: 0;  
-    
+    right: 0;      
 }

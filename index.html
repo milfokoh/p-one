@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Задача «Подписка на бложик»</title>
+    <meta charset="utf-8">    
+    <title>Задача «Подписка на бложик»</title> 
+    <link rel="stylesheet" href="index.css">      
 </head>
-<body>
+<body>    
+    <div id="input-form" class="input-form">     
+        <header class="header-text">Хочу подписаться!</header>
+        <label class="up-text">После вашего согласия на подписку вам будут приходить уведомления на почту и телефон</label>
+        <form id="that-form" class="that-form">
+            <fieldset id="cell-names" class="cell-names">
+                <label for="name">Ваше имя</label>
+                <input type="text" name="name" id="name" class="cell-input" placeholder="Имя" pattern="^[А-Яа-яЁё]" maxlength="35" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="cell-input" placeholder="email@yandex.com" required />
+                <label for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" class="cell-input" placeholder="89990007766" pattern="[0-9]{11}" maxlength="11" required />
+            </fieldset>
+            <fieldset id="check-label" class="check-label">
+                <legend id="label-notifications" class="label-notifications">Хочу получать уведомления</legend> 
+                <label for="send-email" class="checkbtn" >
+                    <input type="checkbox" id="send-email" class="send-email" value="на почту" checked required />
+                    на почту
+                </label>
+                <label for="send-phone" class="checkbtn">
+                    <input type="checkbox" id="send-phone" class="send-phone" value="на телефон" checked required />
+                    на телефон
+                </label>
+            </fieldset>           
+            <button type="submit" id="btn-subscribe" class="btn-subscribe">Подписаться</button>
+        </form>
+    </div>
+
+    <table id="output-form" class="output-form">
+        <tr>
+            <td id="first-cell" class="first-cell">
+                <p>Здравствуйте, Николай!</p>
+                <p>Вы подписались на уведомления о новостях Яндекса.</p>
+                <p>Уведомления будут приходить вам на этот email и на указанный вами телефон - +79xxxxxxx78.</p>
+                <p> Для подтверждения перейдите по<a class="ya-link" href="https://ya.ru/" >ссылке</a>.</p> 
+            </td >
+            <td id="second-cell" class="second-cell">
+                <img src="https://sovetclub.ru/tim/1302d0f62a1703b130a4164033407562.jpg" class="ya-img">
+            </td>
+        </tr>
+        <tr>
+            <td id="third-cell" class="third-cell">
+                <a class="click-link" href="https://yandex.ru/dev/feedback/?from=main">Пожаловаться</a>
+            </td>
+            <td id="fourth-cell" class="fourth-cell">
+                <p id="footer-year" class="footer-year">2024,<a class="click-link" href="https://ya.ru/">Яндекс</a></p>
+        </td>
+          </tr>
+    </table>
 </body>
 </html>
